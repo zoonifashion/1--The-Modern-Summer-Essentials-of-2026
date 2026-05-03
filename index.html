@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
     <title>The Updated Summer Basics 2026 | ArishaModeFashion</title>
     <!-- Google Fonts + Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -25,13 +25,26 @@
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 16px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
         }
 
         .top-bar {
             border-bottom: 1px solid #eaeaea;
-            padding: 20px 0;
-            margin-bottom: 32px;
+            padding: 16px 0;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .top-bar {
+                padding: 20px 0;
+                margin-bottom: 32px;
+            }
         }
 
         .logo-area {
@@ -39,82 +52,194 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 12px;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: -0.02em;
         }
+
+        @media (min-width: 480px) {
+            .logo {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .logo {
+                font-size: 1.8rem;
+            }
+        }
+
         .logo span {
             font-weight: 400;
             color: #6c6c6c;
         }
+
         .social-icons a {
             color: #2c2c2c;
-            margin-left: 18px;
-            font-size: 1.2rem;
+            margin-left: 12px;
+            font-size: 1.1rem;
             transition: color 0.2s;
         }
-        .social-icons a:hover { color: #000; }
+
+        @media (min-width: 768px) {
+            .social-icons a {
+                margin-left: 18px;
+                font-size: 1.2rem;
+            }
+        }
 
         .article-header {
-            margin: 32px 0 28px;
+            margin: 20px 0 20px;
         }
+
+        @media (min-width: 768px) {
+            .article-header {
+                margin: 32px 0 28px;
+            }
+        }
+
+        /* BYLINE: image and text always side by side */
         .byline {
             display: flex;
             align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            font-size: 0.85rem;
+            gap: 10px;
+            flex-wrap: nowrap;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             color: #4a4a4a;
             margin-bottom: 12px;
         }
+
+        @media (min-width: 480px) {
+            .byline {
+                gap: 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .byline {
+                gap: 14px;
+                font-size: 0.85rem;
+                letter-spacing: 0.5px;
+                margin-bottom: 16px;
+            }
+        }
+
+        /* writer avatar */
         .author-avatar-small {
-            width: 32px;
-            height: 32px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             background-image: url('https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777464875/57b3c985-6692-4127-9f35-fe10a0ac492b_yodpaf.jpg');
             background-size: cover;
             background-position: center;
             display: inline-block;
-            border: 1px solid #ddd;
+            border: 1px solid #e0e0e0;
+            flex-shrink: 0;
         }
-        .byline strong {
+
+        @media (min-width: 768px) {
+            .author-avatar-small {
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        .byline-text {
+            white-space: normal;
+            line-height: 1.3;
+        }
+
+        .byline-text strong {
             color: #000;
-            font-weight: 600;
+            font-weight: 700;
         }
+
+        /* wrap date on small screens if needed, but keep inline */
+        @media (max-width: 420px) {
+            .byline {
+                gap: 8px;
+                font-size: 0.7rem;
+            }
+            .byline-text {
+                font-size: 0.7rem;
+            }
+        }
+
         h1 {
-            font-size: 2.9rem;
+            font-size: 1.8rem;
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -0.02em;
-            margin: 16px 0 12px;
+            margin: 12px 0 8px;
         }
+
+        @media (min-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.9rem;
+                margin: 16px 0 12px;
+            }
+        }
+
         .sub-dek {
-            font-size: 1.25rem;
+            font-size: 1rem;
             color: #3a3a3a;
-            max-width: 85%;
-            margin-bottom: 24px;
+            max-width: 100%;
+            margin-bottom: 16px;
         }
+
+        @media (min-width: 768px) {
+            .sub-dek {
+                font-size: 1.25rem;
+                max-width: 85%;
+                margin-bottom: 24px;
+            }
+        }
+
         .affiliate-note {
             background: #f7f7f7;
-            padding: 10px 16px;
-            font-size: 0.8rem;
+            padding: 8px 12px;
+            font-size: 0.7rem;
             color: #5e5e5e;
             border-radius: 40px;
             display: inline-block;
-            margin: 16px 0 0;
+            margin: 12px 0 0;
         }
+
+        @media (min-width: 768px) {
+            .affiliate-note {
+                padding: 10px 16px;
+                font-size: 0.8rem;
+                margin: 16px 0 0;
+            }
+        }
+
         .hero-image {
             width: 100%;
-            border-radius: 28px;
+            border-radius: 20px;
             overflow: hidden;
-            margin: 28px 0 36px;
+            margin: 20px 0 24px;
         }
+
+        @media (min-width: 768px) {
+            .hero-image {
+                border-radius: 28px;
+                margin: 28px 0 36px;
+            }
+        }
+
         .hero-image img {
             width: 100%;
             height: auto;
@@ -125,127 +250,238 @@
         .category-jump {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 40px 0 48px;
+            gap: 8px;
+            margin: 24px 0 32px;
             border-bottom: 1px solid #efefef;
-            padding-bottom: 20px;
+            padding-bottom: 16px;
         }
+
+        @media (min-width: 768px) {
+            .category-jump {
+                gap: 12px;
+                margin: 40px 0 48px;
+                padding-bottom: 20px;
+            }
+        }
+
         .jump-link {
             background: #f3f3f3;
-            padding: 8px 20px;
+            padding: 6px 14px;
             border-radius: 40px;
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             font-weight: 500;
             color: #1a1a1a;
             text-decoration: none;
             transition: all 0.2s;
+            white-space: nowrap;
         }
+
+        @media (min-width: 480px) {
+            .jump-link {
+                padding: 8px 18px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .jump-link {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+            }
+        }
+
         .jump-link:hover {
             background: #000;
             color: white;
         }
 
         .intro-text {
-            font-size: 1.05rem;
-            margin-bottom: 48px;
-            max-width: 85%;
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            max-width: 100%;
             color: #2c2c2c;
         }
+
+        @media (min-width: 768px) {
+            .intro-text {
+                font-size: 1.05rem;
+                margin-bottom: 48px;
+                max-width: 85%;
+            }
+        }
+
         .intro-text p {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .trend-section {
-            margin-bottom: 72px;
-            scroll-margin-top: 30px;
+            margin-bottom: 48px;
+            scroll-margin-top: 20px;
         }
+
+        @media (min-width: 768px) {
+            .trend-section {
+                margin-bottom: 72px;
+                scroll-margin-top: 30px;
+            }
+        }
+
         .section-title {
-            font-size: 1.9rem;
+            font-size: 1.5rem;
             font-weight: 650;
             letter-spacing: -0.01em;
-            border-left: 5px solid #000;
-            padding-left: 20px;
-            margin-bottom: 32px;
+            border-left: 4px solid #000;
+            padding-left: 14px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 1.9rem;
+                border-left: 5px solid #000;
+                padding-left: 20px;
+                margin-bottom: 32px;
+            }
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 32px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 32px;
+            }
+        }
+
         .product-card {
             background: #ffffff;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             transition: transform 0.25s ease, box-shadow 0.2s;
             border: 1px solid #f0f0f0;
         }
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
-            border-color: #e0e0e0;
+
+        @media (min-width: 768px) {
+            .product-card {
+                border-radius: 20px;
+            }
         }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.08);
+        }
+
         .card-img {
             aspect-ratio: 3 / 4;
             width: 100%;
             background: #fafafa;
             overflow: hidden;
         }
+
         .card-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.4s;
         }
-        .product-card:hover .card-img img {
-            transform: scale(1.02);
-        }
+
         .card-info {
-            padding: 18px 16px 20px;
+            padding: 12px 12px 16px;
         }
+
+        @media (min-width: 768px) {
+            .card-info {
+                padding: 18px 16px 20px;
+            }
+        }
+
         .brand-name {
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             color: #6b6b6b;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
+
+        @media (min-width: 768px) {
+            .brand-name {
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                margin-bottom: 6px;
+            }
+        }
+
         .product-title {
             font-weight: 600;
-            font-size: 1rem;
-            line-height: 1.4;
-            margin-bottom: 10px;
+            font-size: 0.85rem;
+            line-height: 1.35;
+            margin-bottom: 6px;
             color: #111;
         }
+
+        @media (min-width: 768px) {
+            .product-title {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+        }
+
         .price {
             font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 12px;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
         }
+
+        @media (min-width: 768px) {
+            .price {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+        }
+
         .old-price {
             text-decoration: line-through;
             color: #9e9e9e;
             font-weight: 400;
-            margin-right: 8px;
+            margin-right: 6px;
         }
-        .sale-price {
-            color: #c0392b;
-        }
+
         .shop-btn {
             display: inline-block;
             background: #000;
             border: 1px solid #000;
-            padding: 6px 18px;
+            padding: 5px 14px;
             border-radius: 40px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             text-decoration: none;
             color: white;
             transition: all 0.2s;
-            margin-top: 6px;
+            margin-top: 4px;
             letter-spacing: 0.3px;
         }
+
+        @media (min-width: 768px) {
+            .shop-btn {
+                padding: 6px 18px;
+                font-size: 0.75rem;
+                margin-top: 6px;
+            }
+        }
+
         .shop-btn:hover {
             background: #2c2c2c;
             border-color: #2c2c2c;
@@ -253,50 +489,92 @@
 
         .author-bio {
             display: flex;
-            gap: 28px;
+            gap: 20px;
             background: #f8f8f8;
-            padding: 30px;
-            border-radius: 28px;
-            margin: 64px 0 40px;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 40px 0 30px;
             align-items: center;
             flex-wrap: wrap;
         }
+
+        @media (min-width: 768px) {
+            .author-bio {
+                gap: 28px;
+                padding: 30px;
+                border-radius: 28px;
+                margin: 64px 0 40px;
+            }
+        }
+
         .author-avatar {
-            width: 80px;
-            height: 80px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             background-image: url('https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777464875/57b3c985-6692-4127-9f35-fe10a0ac492b_yodpaf.jpg');
             background-size: cover;
             background-position: center;
-        }
-        .author-details p {
-            font-size: 0.95rem;
-            color: #2d2d2d;
-        }
-        footer {
-            border-top: 1px solid #ededed;
-            padding: 40px 0 32px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #6c6c6c;
-        }
-        .footer-social a {
-            margin: 0 12px;
-            color: #3d3d3d;
-            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
-        @media (max-width: 768px) {
-            .container { padding: 0 20px; }
-            h1 { font-size: 2.1rem; }
-            .sub-dek { max-width: 100%; font-size: 1rem; }
-            .intro-text { max-width: 100%; }
-            .section-title { font-size: 1.6rem; }
-            .product-grid { gap: 20px; }
-            .author-bio { flex-direction: column; text-align: center; }
+        @media (min-width: 768px) {
+            .author-avatar {
+                width: 80px;
+                height: 80px;
+            }
         }
-        @media (max-width: 480px) {
-            .logo-area { flex-direction: column; align-items: flex-start; }
+
+        .author-details p {
+            font-size: 0.85rem;
+            color: #2d2d2d;
+        }
+
+        @media (min-width: 768px) {
+            .author-details p {
+                font-size: 0.95rem;
+            }
+        }
+
+        footer {
+            border-top: 1px solid #ededed;
+            padding: 30px 0 24px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #6c6c6c;
+        }
+
+        @media (min-width: 768px) {
+            footer {
+                padding: 40px 0 32px;
+                font-size: 0.8rem;
+            }
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            color: #3d3d3d;
+            font-size: 1.1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-social a {
+                margin: 0 12px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* extra small devices */
+        @media (max-width: 380px) {
+            .product-title {
+                font-size: 0.75rem;
+            }
+            .shop-btn {
+                padding: 4px 10px;
+                font-size: 0.65rem;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -309,7 +587,6 @@
             <div class="social-icons">
                 <a href="https://www.instagram.com/arishamodefashion?igsh=Z3J0NWswNXd5enZt&utm_source=ig_contact_invite"><i class="fab fa-instagram"></i></a>
                 <a href="https://youtube.com/@arishamodefashion?si=OUQgdsH5tNfO-1qy"><i class="fab fa-youtube"></i></a>
-              
             </div>
         </div>
     </div>
@@ -317,47 +594,51 @@
 
 <main class="container">
     <div class="article-header">
+        <!-- BYLINE: writer image side by side with "By Aman Kumar" (and date) -->
         <div class="byline">
             <span class="author-avatar-small"></span>
-            <span>BY <strong>AMAN KUMAR</strong> · PUBLISHED 03 May2026 12:00AM</span>
+            <div class="byline-text">
+                <strong>BY AMAN KUMAR</strong> · PUBLISHED 03 MAY 2026
+            </div>
         </div>
-        <h1> 2026 Summer Basics Everyone Will Be Wearing</h1>
+        <h1>2026 Summer Basics Everyone Will Be Wearing</h1>
         <div class="sub-dek">Boatneck tank tops, silk slips, white cotton dresses, capris, cropped flares, and knee‑length skirts — the ultimate warm‑weather staples.</div>
         <div class="affiliate-note">
-            <i class="fas fa-link"></i>When you purchase through links on our site, we may earn an affiliate commission. <a href="https://arishamodefashion.github.io/ArishaModeFashion-com/" style="text-decoration:underline; color:inherit;">Here's how it works.</a>
+            <i class="fas fa-link"></i> When you purchase through links on our site, we may earn an affiliate commission. <a href="https://arishamodefashion.github.io/ArishaModeFashion-com/" style="text-decoration:underline; color:inherit;">Here's how it works.</a>
         </div>
     </div>
 
-    <!-- Hero Image replaced with user-provided GIF (IMAGE SECTION 1) -->
+    <!-- Hero GIF -->
     <div class="hero-image">
         <img src="https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9622_k5yylv.gif" alt="Summer style 2026 animated">
-        <div style="font-size:12px; padding: 8px 0 0; text-align:right; color:#888;">(Image credit:@rachelle.rowlings)</div>
+        <div style="font-size:10px; padding: 6px 0 0; text-align:right; color:#888;">(Image credit: @rachelle.rowlings)</div>
     </div>
 
     <div class="intro-text">
         <p>Fashion basics never truly go out of style, but every season introduces new interpretations of familiar pieces. For summer 2026, updated essentials include boatneck tank tops, vibrant colorful tops highlighted in Who What Wear’s The Great Try-On Spring 2026, sleek black slip dresses, airy white cotton dresses, capri pants, cropped flare silhouettes, and knee-length skirts.</p>
         <p>When building a reliable wardrobe foundation, brands like J.Crew and Gap continue to remain trusted destinations year after year. Alongside them, fashion editors are increasingly favoring labels such as CDLP, Cou Cou Intimates, Deiji Studios, Flore Flore, Leset, and Tank Air. A defining characteristic of this season’s basics—particularly dresses—is the strong preference for natural fabrics, with silk and cotton standing out as key materials.</p>
-        <p>When building a reliable wardrobe foundation, brands like J.Crew and Gap continue to remain trusted destinations year after year. Alongside them, fashion editors are increasingly favoring labels such as CDLP, Cou Cou Intimates, Deiji Studios, Flore Flore, Leset, and Tank Air. A defining characteristic of this season’s basics—particularly dresses—is the strong preference for natural fabrics, with silk and cotton standing out as key materials.</p>
+        <p>The rise of boatneck tank tops feels like a natural evolution of long and quarter-sleeve boatneck styles we’ve been seeing on Hailey Bieber and Sabrina Carpenter — now adapted perfectly for warmer weather.</p>
     </div>
 
     <div class="category-jump">
         <a href="#boatneck" class="jump-link">⚓ Boatneck Tanks</a>
-        <a href="#colorful-top" class="jump-link">Colorful Top</a>
-        <a href="#black-slip" class="jump-link">🖤 Black Slip Dresses</a>
-        <a href="#white-cotton" class="jump-link">🤍 White Cotton Dresses</a>
+        <a href="#colorful-top" class="jump-link">🎨 Colorful Tops</a>
+        <a href="#black-slip" class="jump-link">🖤 Slip Dresses</a>
+        <a href="#white-cotton" class="jump-link">🤍 White Dresses</a>
         <a href="#capris" class="jump-link">📏 Capris</a>
         <a href="#cropped-flares" class="jump-link">🌀 Cropped Flares</a>
-        <a href="#knee-skirts" class="jump-link">✧ Knee-Length Skirts</a>
+        <a href="#knee-skirts" class="jump-link">✧ Knee Skirts</a>
     </div>
 
     <div id="product-sections-container"></div>
 
+    <!-- Author Bio section (larger image + description) -->
     <div class="author-bio">
         <div class="author-avatar"></div>
         <div class="author-details">
-            <strong>Aman kumar</strong><br/>
-            <p>Founder & Fashion Director at ArishaModeFashion. Ex-Vogue Tech Expert, now decoding seasonal trends, sustainable style, and investment dressing. Arisha’s curation focuses on timeless pieces that speak to the modern minimalist.</p>
-            <p style="margin-top:8px;"><i class="fas fa-envelope"></i> Follow on Instagram @aman.lakeviya &nbsp;|&nbsp; <i class="fab fa-twitter"></i>@AmanKum79020844</p>
+            <strong>Aman Kumar</strong><br/>
+            <p>Founder & Fashion Director at ArishaModeFashion.Tech Expert, now decoding seasonal trends, sustainable style, and investment dressing. Aman’s curation focuses on timeless pieces that speak to the modern minimalist.</p>
+            <p style="margin-top:6px;"><i class="fas fa-envelope"></i> Follow on Instagram @aman.lakeviya &nbsp;|&nbsp; <i class="fab fa-twitter"></i> </p>
         </div>
     </div>
 </main>
@@ -369,43 +650,35 @@
             <a href="https://youtube.com/@arishamodefashion?si=OUQgdsH5tNfO-1qy"><i class="fab fa-youtube"></i></a>
             <a href="https://arishamodefashion.github.io/ArishaModeFashion-com/"><i class="fab fa-twitter"></i></a>
         </div>
-        <p style="margin: 20px 0 8px;">©2026ArishaModeFashion</p>
+        <p style="margin: 16px 0 6px;">©2026ArishaModeFashion</p>
         <p>All images are for editorial representation. Prices and availability may vary.</p>
     </div>
 </footer>
 
 <script>
-    // --------------------------------------------------------------
-    // COMPLETE PRODUCT DATA with UPDATED IMAGES & SHOP URLs (user provided)
-    // --------------------------------------------------------------
+    // COMPLETE PRODUCT DATA (preserving all items and URLs)
     const products = [
-        // BOATNECK TANK TOPS (6)
+        // BOATNECK TANK TOPS
         { name: "Closeknit Jersey Boatneck Crop Tank Top", brand: "GAP", price: 35, salePrice: 17, category: "boatneck", 
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9623_creghn.webp", 
           shopUrl: "https://www.gap.com/browse/product.do?pid=771141012&vid=2&tid=goaff042853&kwid=1&ap=6&ds_agid=23590895170-&gclsrc=aw.ds&gad_source=1&gad_campaignid=23580761892&gbraid=0AAAAAD_AT8v1FhS1w1f7-s5d1BGu9DDJu&gclid=Cj0KCQjwkrzPBhCqARIsAJN460nsE1yKocOnpa_sOWIHv2dDH2u9kE53UflFWRsfbUevFrfczuQ4DOwaApS7EALw_wcB&clickid=XZ%3AWkEwBBxyZUpwVwJVZYT1HUkuyeHzuEzNiz40&siteID=goafcid383244#pdp-page-content" },
-        
         { name: "Minimal Sleeveless T-Shirt", brand: "ZARA", price: 20, salePrice: null, category: "boatneck",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9624_hgetcb.webp",
           shopUrl: "https://www.zara.com/us/en/minimal-sleeveless-t-shirt-p02335177.html?v1=506863478&sv1=affiliate&sv_campaign_id=231761&awc=21094_1777766777_53b3ee65c2e74251d3280e2ae61db9c8&utm_source=awin&utm_medium=affiliation&utm_campaign=231761&utm_content=Clique+Media&utm_term=21094_1777766777_53b3ee65c2e74251d3280e2ae61db9c8g" },
-        
         { name: "Dusk Knit Top", brand: "REFORMATION", price: 58, salePrice: null, category: "boatneck",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9625_nzweaq.webp",
           shopUrl: "https://www.thereformation.com/products/dusk-knit-top/1312627LPS.html?fbvar=nonbrandedgoogle&gad_source=1&gad_campaignid=22379160712&gbraid=0AAAAADmLagXsJQB2s83wy4R0lCXkopJoW&gclid=Cj0KCQjwkrzPBhCqARIsAJN460mt6nTr6tDAd_LXVUO-Q4KwqswpOKSBkDmmCfYfJLXvHbQD1R6Ck_4aAvScEALw_wcB&utm_source=25ZRSXYPVYg&utm_medium=10&utm_campaign=LinkShare&sid=LS298X102&ranMID=40090&ranEAID=1921634&ranSiteID=25ZRSXYPVYg-M511M7mv2ATEzKi5HNnEyA" },
-        
-        //colorful-top
+        // COLORFUL TOPS
         { name: "Everyday Cotton T-Shirt", brand: "TOPSHOP", price: 17, salePrice: null, category: "colorful-top",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9626_teozxt.webp",
           shopUrl: "https://www.nordstrom.com/s/everyday-cotton-t-shirt/8827702?utm_channel=low_nd_affiliates_content&utm_content=hawk&utm_term=75786&utm_source=impact&utm_medium=affiliate_content&utm_campaign=Future%20US%2C%20LLC&irgwc=1&afsrc=1&irclickid=2vWRjHwEMxyZU1UQyxTrZR3cUkuyeCQuEzNi2M0" },
-        
         { name: "Car Ribbed Organic Cotton-Jersey T-Shirt", brand: "FLORE FLORE", price: 115, salePrice: null, category: "colorful-top",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9627_cdnkhv.webp",
           shopUrl: "https://www.net-a-porter.com/en-us/shop/product/flore-flore/clothing/t-shirts/car-ribbed-organic-cotton-jersey-t-shirt/46376663163033942?cm_mmc=LinkshareUS-_-kXQk6*ivFEQ-_-Custom-_-LinkBuilder&utm_source=rakuten&utm_medium=affiliation&utm_campaign=US_2294204&utm_content=US_Future+US+LLC&utm_term=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&ranMID=24449&ranEAID=kXQk6*ivFEQ&ranSiteID=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&siteID=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&adj_t=663co1a&adj_campaign=US_2294204&linkshare_siteID=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&linkshare_affiliate_mid=24449" },
-        
         { name: "The Ribbed Polo Knit Top", brand: "FRAME", price: 358, salePrice: null, category: "colorful-top",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9628_t7elmh.webp",
           shopUrl: "https://www.nordstrom.com/s/the-ribbed-polo-knit-top/8716760?utm_channel=low_nd_affiliates_content&utm_content=hawk&utm_term=75786&utm_source=impact&utm_medium=affiliate_content&utm_campaign=Future%20US%2C%20LLC&irgwc=1&afsrc=1&irclickid=2vWRjHwEMxyZU1UQyxTrZR3cUkuyesR%3AEzNi2M0" },
-
-        // BLACK SLIP DRESSES (3)
+        // BLACK SLIP DRESSES
         { name: "Lightweight Tank Dress", brand: "CDLP", price: 180, salePrice: null, category: "black-slip",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750406/IMG_9629_nmohxo.webp",
           shopUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9632_sgmfou.webp" },
@@ -415,12 +688,7 @@
         { name: "Dammit Janet Bias Cut Jersey Dress", brand: "EMILY DAWN LONG", price: 495, salePrice: null, category: "black-slip",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9634_s4gylh.webp",
           shopUrl: "https://www.nordstrom.com/s/dammit-janet-bias-cut-jersey-dress/8768226?origin=category-personalizedsort&breadcrumb=Home%2FWomen%2FClothing%2FDresses%2FWhite%20Dresses&color=100&utm_channel=low_nd_affiliates_content&utm_content=hawk&utm_term=75786&utm_source=impact&utm_medium=affiliate_content&utm_campaign=Future%20US%2C%20LLC&irclickid=2vWRjHwEMxyZU1UQyxTrZR3cUkuybrXeEzN8xY0&irgwc=1&afsrc=1" },
-
-        // WHITE COTTON DRESSES (3)
-        
-        { name: "The Ribbed Polo Knit Top", brand: "FRAME", price: 358, salePrice: null, category: "white-dress",
-          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9628_t7elmh.webp",
-          shopUrl: "https://www.nordstrom.com/s/the-ribbed-polo-knit-top/8716760?utm_channel=low_nd_affiliates_content&utm_content=hawk&utm_term=75786&utm_source=impact&utm_medium=affiliate_content&utm_campaign=Future%20US%2C%20LLC&irgwc=1&afsrc=1&irclickid=2vWRjHwEMxyZU1UQyxTrZR3cUkuyesR%3AEzNi2M0" },
+        // WHITE COTTON DRESSES
         { name: "Cotton Voile Scallop-Trim Babydoll Dress", brand: "J.CREW", price: 98, salePrice: null, category: "white-dress",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750409/IMG_9636_o452lz.webp",
           shopUrl: "https://www.anrdoezrs.net/click-2299623-13240858?sid=whowhatwear-in-4947269229105693958&url=https://www.jcrew.com/p/womens/categories/clothing/swim/statement/cotton-voile-scallop-trim-babydoll-dress/CS548" },
@@ -430,8 +698,7 @@
         { name: "Ezra Dress", brand: "POSSE", price: 234, salePrice: null, category: "white-dress",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750409/IMG_9638_da5qun.webp",
           shopUrl: "https://www.anrdoezrs.net/click-2299623-15842256?sid=whowhatwear-in-1425971534862121380&url=https://www.fwrd.com/product-posse-ezra-dress-in-vintage-white/PSSF-WD64/?d=Womens&tCurrency=USD&tCountryCode=US&utm_source=google&utm_medium=cpc&utm_campaign=PMax:+Product+Listing+Ads+-+FWRD+-+High+ROAS+SKUs&gclsrc=aw.ds&gad_source=1&gad_campaignid=23773030029&gbraid=0AAAAADyLQd5QvxaMM2oXj0KmCF90tZJ0a&gclid=Cj0KCQjwkrzPBhCqARIsAJN460n38xAcyNr7jBgz-74e-8jCmapIx-DhiSdOOJ26yV_lB00ZsdpD1KAaAn2bEALw_wcB" },
-
-        // CAPRIS (3)
+        // CAPRIS
         { name: "No 2467 / Aneu", brand: "PALOMA WOOL", price: 135, salePrice: null, category: "capris",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750410/IMG_9645_mlhehc.webp",
           shopUrl: "https://palomawool.com/products/aneu-polka-dot-capri-leggings-pw-embroidery" },
@@ -441,16 +708,14 @@
         { name: "Capri Leggings", brand: "FORM", price: 78, salePrice: null, category: "capris",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750410/IMG_9648_wdkt83.webp",
           shopUrl: "https://go.redirectingat.com/?id=92X1711942&xcust=whowhatwear_in_3955253171330093229&xs=1&url=https%3A%2F%2Fjoinform.com%2F%2Fproducts%2Fcapri-leggings-black%3Fvariant%3D45561956008119%26utm_medium%3Dcpc%26utm_source%3Dgoogle%26utm_campaign%3D22759565213%26utm_content%3D_c_%26utm_term%3D%26gad_source%3D1%26gad_campaignid%3D22753367751%26gbraid%3D0AAAAAoL44SOiB_HUwumXWGn4O-ZXkOy6u%26gclid%3DCjwKCAjwhqfPBhBWEiwAZo196mR_iOU3AzFwBqm27KjxTP12iwj1xy7K2Zmk8vP50bIUEnoh7ofCQBoClYYQAvD_BwE%26source%3Daw%26channel%3Daw%26sv1%3Daffiliate%26sv_campaign_id%3D78888%26sscid%3D42254_1777341370_6763e96099cf0a51457460f151f95a6f%26awc%3D42254_1777341370_6763e96099cf0a51457460f151f95a6f&sref=https%3A%2F%2Fwww.whowhatwear.com%2Ffashion%2Fshopping%2Fbasics-summer-2026" },
-
-        // CROPPED FLARES (2)
+        // CROPPED FLARES
         { name: "Kick Cropped Stretch-Cotton Flared Pants", brand: "HIGH SPORT", price: 860, salePrice: null, category: "cropped-flares",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750410/IMG_9650_kn6zac.webp",
           shopUrl: "https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=24449&u1=whowhatwear-in-1045141986563659752&murl=https%3A%2F%2Fwww.net-a-porter.com%2Fen-us%2Fshop%2Fproduct%2Fhigh-sport%2Fclothing%2Fflared%2Fkick-cropped-stretch-cotton-flared-pants%2F1647597304200884" },
         { name: "ZW Collection Limited Edition Cropped Flare Pants", brand: "ZARA", price: 129, salePrice: null, category: "cropped-flares",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750411/IMG_9651_eaawex.webp",
           shopUrl: "https://www.awin1.com/awclick.php?awinmid=21094&awinaffid=231761&clickref=whowhatwear-in-1319849125315914813&p=https%3A%2F%2Fwww.zara.com%2Fus%2Fen%2Fzw-collection-limited-edition-cropped-flare-pants-p02099617.html%3Fv1%3D531634818%26sv1%3Daffiliate%26sv_campaign_id%3D231761%26awc%3D21094_1777316170_c242d9d8481f2e7744787ffc16ba1955%26utm_source%3Dawin%26utm_medium%3Daffiliation%26utm_campaign%3D231761%26utm_content%3DClique%2BMedia%26utm_term%3D21094_1777316170_c242d9d8481f2e7744787ffc16ba1955" },
-
-        // KNEE-LENGTH SKIRTS (4)
+        // KNEE-LENGTH SKIRTS
         { name: "The Slip Skirt Black", brand: "COU COU INTIMATES", price: 78, salePrice: null, category: "knee-skirt",
           imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750406/IMG_9653_kpn8mx.webp",
           shopUrl: "https://www.awin1.com/awclick.php?awinmid=51395&awinaffid=103504&clickref=whowhatwear-in-9763517950132514510&p=https%3A%2F%2Fcoucouintimates.com%2Fen-us%2Fproducts%2Fthe-slip-skirt-black%3Fsource%3Daw%26sv1%3Daffiliate%26sv_campaign_id%3D103504%26sscid%3D51395_1777341906_3b23f70becb5e34b11d5048c3a57fdd2%26awc%3D51395_1777341906_3b23f70becb5e34b11d5048c3a57fdd2" },
@@ -468,6 +733,7 @@
     // Group products by category
     const groups = {
         boatneck: { title: "Boatneck Tank Tops", id: "boatneck", products: [] },
+        "colorful-top": { title: "Colorful Tops", id: "colorful-top", products: [] },
         "black-slip": { title: "Black Slip Dresses", id: "black-slip", products: [] },
         "white-dress": { title: "White Cotton Dresses", id: "white-cotton", products: [] },
         capris: { title: "Capris", id: "capris", products: [] },
@@ -475,7 +741,9 @@
         "knee-skirt": { title: "Knee-Length Skirts", id: "knee-skirts", products: [] }
     };
 
-    products.forEach(prod => { if (groups[prod.category]) groups[prod.category].products.push(prod); });
+    products.forEach(prod => {
+        if (groups[prod.category]) groups[prod.category].products.push(prod);
+    });
 
     function renderProductCard(p) {
         const hasSale = p.salePrice !== null && p.salePrice < p.price;
@@ -503,6 +771,7 @@
         if (groupKey === 'black-slip') anchorId = 'black-slip';
         if (groupKey === 'knee-skirt') anchorId = 'knee-skirts';
         if (groupKey === 'cropped-flares') anchorId = 'cropped-flares';
+        if (groupKey === 'colorful-top') anchorId = 'colorful-top';
         return `<div class="trend-section" id="${anchorId}"><div class="section-title">${groupObj.title}</div><div class="product-grid">${productCardsHtml}</div></div>`;
     }
 
@@ -510,6 +779,7 @@
     if (container) {
         let sectionsHtml = '';
         sectionsHtml += buildSection('boatneck', groups.boatneck);
+        sectionsHtml += buildSection('colorful-top', groups['colorful-top']);
         sectionsHtml += buildSection('black-slip', groups['black-slip']);
         sectionsHtml += buildSection('white-dress', groups['white-dress']);
         sectionsHtml += buildSection('capris', groups.capris);
@@ -518,12 +788,12 @@
         container.innerHTML = sectionsHtml;
     }
 
-    // extra editorial about natural materials
+    // extra editorial note
     const extraEditorial = document.createElement('div');
-    extraEditorial.style.margin = "40px 0 20px";
-    extraEditorial.style.padding = "20px 0";
+    extraEditorial.style.margin = "32px 0 20px";
+    extraEditorial.style.padding = "16px 0";
     extraEditorial.style.borderTop = "1px solid #ececec";
-    extraEditorial.innerHTML = `<p style="font-size:0.9rem; color:#3b3b3b;"><strong>🧵 Natural materials & sustainable focus:</strong> Brands like Deiji Studios, Leset, and Tank Air emphasize organic cotton, linen, and silk — elevating summer basics with eco‑conscious luxury. Colorful tops (citrus, cobalt) also made waves in The Great Try-On Spring 2026 report.</p>`;
+    extraEditorial.innerHTML = `<p style="font-size:0.85rem; color:#3b3b3b;"><strong>🧵 Natural materials & sustainable focus:</strong> Brands like Deiji Studios, Leset, and Tank Air emphasize organic cotton, linen, and silk — elevating summer basics with eco‑conscious luxury. Colorful tops (citrus, cobalt) also made waves in The Great Try-On Spring 2026 report.</p>`;
     if (container) container.insertAdjacentElement('afterend', extraEditorial);
 </script>
 </body>
