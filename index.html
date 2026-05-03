@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The Updated Summer Basics 2026 | ArishaModeFashion</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .top-bar {
+            border-bottom: 1px solid #eaeaea;
+            padding: 20px 0;
+            margin-bottom: 32px;
+        }
+
+        .logo-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .logo span {
+            font-weight: 400;
+            color: #6c6c6c;
+        }
+        .social-icons a {
+            color: #2c2c2c;
+            margin-left: 18px;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+        .social-icons a:hover { color: #000; }
+
+        .article-header {
+            margin: 32px 0 28px;
+        }
+        .byline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4a4a4a;
+            margin-bottom: 12px;
+        }
+        .author-avatar-small {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-image: url('https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777464875/57b3c985-6692-4127-9f35-fe10a0ac492b_yodpaf.jpg');
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+            border: 1px solid #ddd;
+        }
+        .byline strong {
+            color: #000;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 2.9rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin: 16px 0 12px;
+        }
+        .sub-dek {
+            font-size: 1.25rem;
+            color: #3a3a3a;
+            max-width: 85%;
+            margin-bottom: 24px;
+        }
+        .affiliate-note {
+            background: #f7f7f7;
+            padding: 10px 16px;
+            font-size: 0.8rem;
+            color: #5e5e5e;
+            border-radius: 40px;
+            display: inline-block;
+            margin: 16px 0 0;
+        }
+        .hero-image {
+            width: 100%;
+            border-radius: 28px;
+            overflow: hidden;
+            margin: 28px 0 36px;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        .category-jump {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0 48px;
+            border-bottom: 1px solid #efefef;
+            padding-bottom: 20px;
+        }
+        .jump-link {
+            background: #f3f3f3;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .jump-link:hover {
+            background: #000;
+            color: white;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            margin-bottom: 48px;
+            max-width: 85%;
+            color: #2c2c2c;
+        }
+        .intro-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        .trend-section {
+            margin-bottom: 72px;
+            scroll-margin-top: 30px;
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 650;
+            letter-spacing: -0.01em;
+            border-left: 5px solid #000;
+            padding-left: 20px;
+            margin-bottom: 32px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 32px;
+        }
+        .product-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.2s;
+            border: 1px solid #f0f0f0;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+            border-color: #e0e0e0;
+        }
+        .card-img {
+            aspect-ratio: 3 / 4;
+            width: 100%;
+            background: #fafafa;
+            overflow: hidden;
+        }
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+        .product-card:hover .card-img img {
+            transform: scale(1.02);
+        }
+        .card-info {
+            padding: 18px 16px 20px;
+        }
+        .brand-name {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6b6b6b;
+            margin-bottom: 6px;
+        }
+        .product-title {
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .price {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #9e9e9e;
+            font-weight: 400;
+            margin-right: 8px;
+        }
+        .sale-price {
+            color: #c0392b;
+        }
+        .shop-btn {
+            display: inline-block;
+            background: #000;
+            border: 1px solid #000;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: all 0.2s;
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+        }
+        .shop-btn:hover {
+            background: #2c2c2c;
+            border-color: #2c2c2c;
+        }
+
+        .author-bio {
+            display: flex;
+            gap: 28px;
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 28px;
+            margin: 64px 0 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-image: url('https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777464875/57b3c985-6692-4127-9f35-fe10a0ac492b_yodpaf.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .author-details p {
+            font-size: 0.95rem;
+            color: #2d2d2d;
+        }
+        footer {
+            border-top: 1px solid #ededed;
+            padding: 40px 0 32px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6c6c6c;
+        }
+        .footer-social a {
+            margin: 0 12px;
+            color: #3d3d3d;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            h1 { font-size: 2.1rem; }
+            .sub-dek { max-width: 100%; font-size: 1rem; }
+            .intro-text { max-width: 100%; }
+            .section-title { font-size: 1.6rem; }
+            .product-grid { gap: 20px; }
+            .author-bio { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .logo-area { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container">
+        <div class="logo-area">
+            <div class="logo">ARISHAMODE<span>FASHION</span></div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+    <div class="article-header">
+        <div class="byline">
+            <span class="author-avatar-small"></span>
+            <span>BY <strong>ARISHA SHARMA</strong> · PUBLISHED 3 DAYS AGO IN BUYING GUIDES</span>
+        </div>
+        <h1>The Updated Summer Basics Fashion People Will Wear in 2026</h1>
+        <div class="sub-dek">Boatneck tank tops, silk slips, white cotton dresses, capris, cropped flares, and knee‑length skirts — the ultimate warm‑weather staples.</div>
+        <div class="affiliate-note">
+            <i class="fas fa-link"></i> When you purchase through links on our site, we may earn an affiliate commission. <a href="#" style="text-decoration:underline; color:inherit;">Here's how it works.</a>
+        </div>
+    </div>
+
+    <!-- Hero Image replaced with user-provided GIF (IMAGE SECTION 1) -->
+    <div class="hero-image">
+        <img src="https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9622_k5yylv.gif" alt="Summer style 2026 animated">
+        <div style="font-size:12px; padding: 8px 0 0; text-align:right; color:#888;">(Image credit: @rachelle.rowlings)</div>
+    </div>
+
+    <div class="intro-text">
+        <p>Basics are timeless, but each year brings its own variation on popular styles. For summer 2026, that includes boatneck tank tops, colorful tops (as seen in Who What Wear's most recent The Great Try-On Spring 2026), black slip dresses, white cotton dresses, capris, cropped flares, and knee-length skirts.</p>
+        <p>When it comes to wardrobe staples, J.Crew and Gap are obvious go-to retailers year after year. Other brands editors are gravitating toward include CDLP, Cou Cou Intimates, Deiji Studios, Flore Flore, Leset, and Tank Air. Across these basics, another notable element this season—especially with dresses —is an emphasis on natural materials like silk and cotton.</p>
+        <p>The rise of boatneck tank tops feels like a natural evolution of the long and quarter-sleeve boatneck styles we've been seeing—worn by Hailey Bieber and Sabrina Carpenter—but for warmer weather.</p>
+    </div>
+
+    <div class="category-jump">
+        <a href="#boatneck" class="jump-link">⚓ Boatneck Tanks</a>
+        <a href="#black-slip" class="jump-link">🖤 Black Slip Dresses</a>
+        <a href="#white-cotton" class="jump-link">🤍 White Cotton Dresses</a>
+        <a href="#capris" class="jump-link">📏 Capris</a>
+        <a href="#cropped-flares" class="jump-link">🌀 Cropped Flares</a>
+        <a href="#knee-skirts" class="jump-link">✧ Knee-Length Skirts</a>
+    </div>
+
+    <div id="product-sections-container"></div>
+
+    <div class="author-bio">
+        <div class="author-avatar"></div>
+        <div class="author-details">
+            <strong>Arisha Sharma</strong><br/>
+            <p>Founder & Fashion Director at ArishaModeFashion. Ex-Vogue India editor, now decoding seasonal trends, sustainable style, and investment dressing. Arisha’s curation focuses on timeless pieces that speak to the modern minimalist.</p>
+            <p style="margin-top:8px;"><i class="fas fa-envelope"></i> Follow on Instagram @arishamode &nbsp;|&nbsp; <i class="fab fa-twitter"></i> @arishafashion</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p style="margin: 20px 0 8px;">© 2026 ArishaModeFashion — The Updated Summer Basics Shopping Guide</p>
+        <p>All images are for editorial representation. Prices and availability may vary.</p>
+    </div>
+</footer>
+
+<script>
+    // --------------------------------------------------------------
+    // COMPLETE PRODUCT DATA with UPDATED IMAGES & SHOP URLs (user provided)
+    // --------------------------------------------------------------
+    const products = [
+        // BOATNECK TANK TOPS (6)
+        { name: "Closeknit Jersey Boatneck Crop Tank Top", brand: "GAP", price: 35, salePrice: 17, category: "boatneck", 
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9623_creghn.webp", 
+          shopUrl: "https://www.gap.com/browse/product.do?pid=771141012&vid=2&tid=goaff042853&kwid=1&ap=6&ds_agid=23590895170-&gclsrc=aw.ds&gad_source=1&gad_campaignid=23580761892&gbraid=0AAAAAD_AT8v1FhS1w1f7-s5d1BGu9DDJu&gclid=Cj0KCQjwkrzPBhCqARIsAJN460nsE1yKocOnpa_sOWIHv2dDH2u9kE53UflFWRsfbUevFrfczuQ4DOwaApS7EALw_wcB&clickid=XZ%3AWkEwBBxyZUpwVwJVZYT1HUkuyeHzuEzNiz40&siteID=goafcid383244#pdp-page-content" },
+        
+        { name: "Minimal Sleeveless T-Shirt", brand: "ZARA", price: 20, salePrice: null, category: "boatneck",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9624_hgetcb.webp",
+          shopUrl: "https://www.zara.com/us/en/minimal-sleeveless-t-shirt-p02335177.html?v1=506863478&sv1=affiliate&sv_campaign_id=231761&awc=21094_1777766777_53b3ee65c2e74251d3280e2ae61db9c8&utm_source=awin&utm_medium=affiliation&utm_campaign=231761&utm_content=Clique+Media&utm_term=21094_1777766777_53b3ee65c2e74251d3280e2ae61db9c8g" },
+        
+        { name: "Dusk Knit Top", brand: "REFORMATION", price: 58, salePrice: null, category: "boatneck",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9625_nzweaq.webp",
+          shopUrl: "https://www.thereformation.com/products/dusk-knit-top/1312627LPS.html?fbvar=nonbrandedgoogle&gad_source=1&gad_campaignid=22379160712&gbraid=0AAAAADmLagXsJQB2s83wy4R0lCXkopJoW&gclid=Cj0KCQjwkrzPBhCqARIsAJN460mt6nTr6tDAd_LXVUO-Q4KwqswpOKSBkDmmCfYfJLXvHbQD1R6Ck_4aAvScEALw_wcB&utm_source=25ZRSXYPVYg&utm_medium=10&utm_campaign=LinkShare&sid=LS298X102&ranMID=40090&ranEAID=1921634&ranSiteID=25ZRSXYPVYg-M511M7mv2ATEzKi5HNnEyA" },
+        
+        { name: "Everyday Cotton T-Shirt", brand: "TOPSHOP", price: 17, salePrice: null, category: "boatneck",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9626_teozxt.webp",
+          shopUrl: "https://www.nordstrom.com/s/everyday-cotton-t-shirt/8827702?utm_channel=low_nd_affiliates_content&utm_content=hawk&utm_term=75786&utm_source=impact&utm_medium=affiliate_content&utm_campaign=Future%20US%2C%20LLC&irgwc=1&afsrc=1&irclickid=2vWRjHwEMxyZU1UQyxTrZR3cUkuyeCQuEzNi2M0" },
+        
+        { name: "Car Ribbed Organic Cotton-Jersey T-Shirt", brand: "FLORE FLORE", price: 115, salePrice: null, category: "boatneck",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9627_cdnkhv.webp",
+          shopUrl: "https://www.net-a-porter.com/en-us/shop/product/flore-flore/clothing/t-shirts/car-ribbed-organic-cotton-jersey-t-shirt/46376663163033942?cm_mmc=LinkshareUS-_-kXQk6*ivFEQ-_-Custom-_-LinkBuilder&utm_source=rakuten&utm_medium=affiliation&utm_campaign=US_2294204&utm_content=US_Future+US+LLC&utm_term=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&ranMID=24449&ranEAID=kXQk6*ivFEQ&ranSiteID=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&siteID=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&adj_t=663co1a&adj_campaign=US_2294204&linkshare_siteID=kXQk6.ivFEQ-oSEQ0HmAXJLEEd3ILwEAkA&linkshare_affiliate_mid=24449" },
+        
+        { name: "The Ribbed Polo Knit Top", brand: "FRAME", price: 358, salePrice: null, category: "boatneck",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750407/IMG_9628_t7elmh.webp",
+          shopUrl: "https://www.nordstrom.com/s/the-ribbed-polo-knit-top/8716760?utm_channel=low_nd_affiliates_content&utm_content=hawk&utm_term=75786&utm_source=impact&utm_medium=affiliate_content&utm_campaign=Future%20US%2C%20LLC&irgwc=1&afsrc=1&irclickid=2vWRjHwEMxyZU1UQyxTrZR3cUkuyesR%3AEzNi2M0" },
+
+        // BLACK SLIP DRESSES (3)
+        { name: "Lightweight Tank Dress", brand: "CDLP", price: 180, salePrice: null, category: "black-slip",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750406/IMG_9629_nmohxo.webp",
+          shopUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9632_sgmfou.webp" },
+        { name: "90s Slip Dress Black", brand: "SILK LAUNDRY", price: 290, salePrice: null, category: "black-slip",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9632_sgmfou.webp",
+          shopUrl: "https://go.redirectingat.com/?id=92X1711942&xcust=whowhatwear_in_1026601178174810967&xs=1&url=https%3A%2F%2Fwww.silklaundry.com%2Fproducts%2F90s-slip-dress-black&sref=https%3A%2F%2Fwww.whowhatwear.com%2Ffashion%2Fshopping%2Fbasics-summer-2026" },
+        { name: "Dammit Janet Bias Cut Jersey Dress", brand: "EMILY DAWN LONG", price: 495, salePrice: null, category: "black-slip",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750408/IMG_9634_s4gylh.webp",
+          shopUrl: "https://www.nordstrom.com/s/dammit-janet-bias-cut-jersey-dress/8768226?origin=category-personalizedsort&breadcrumb=Home%2FWomen%2FClothing%2FDresses%2FWhite%20Dresses&color=100&utm_channel=low_nd_affiliates_content&utm_content=hawk&utm_term=75786&utm_source=impact&utm_medium=affiliate_content&utm_campaign=Future%20US%2C%20LLC&irclickid=2vWRjHwEMxyZU1UQyxTrZR3cUkuybrXeEzN8xY0&irgwc=1&afsrc=1" },
+
+        // WHITE COTTON DRESSES (3)
+        { name: "Cotton Voile Scallop-Trim Babydoll Dress", brand: "J.CREW", price: 98, salePrice: null, category: "white-dress",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750409/IMG_9636_o452lz.webp",
+          shopUrl: "https://www.anrdoezrs.net/click-2299623-13240858?sid=whowhatwear-in-4947269229105693958&url=https://www.jcrew.com/p/womens/categories/clothing/swim/statement/cotton-voile-scallop-trim-babydoll-dress/CS548" },
+        { name: "Clover Organic Cotton Poplin Tiered Sundress", brand: "DÖEN", price: 278, salePrice: null, category: "white-dress",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750409/IMG_9637_acbinu.webp",
+          shopUrl: "https://nordstrom.sjv.io/c/75786/1960196/23920?subId1=whowhatwear-in-3376736141665695889&sharedId=hawk&u=https%3A%2F%2Fwww.nordstrom.com%2Fs%2Fclover-organic-cotton-poplin-tiered-sundress%2F8714502%3Fcolor%3DSALT%26utm_content%3D174955493259%26utm_medium%3Dcpc%26utm_term%3Dpla-297286437545%26utm_channel%3Dlow_nd_shopping_lia%26utm_source%3Dgoogle%26adpos%3D%26creative%3D732400411881%26device%3Dc%26matchtype%3D%26network%3Dg%26acctid%3D21700000001689570%26dskeywordid%3D297286437545%26lid%3D92700081491243645%26ds_s_kwgid%3D58700008847215170%26ds_s_inventory_feed_id%3D97700000007631122%26dsproductgroupid%3D297286437545%26product_id%3DAA287050%26merchid%3D1243147%26prodctry%3DUS%26prodlang%3Den%26channel%3Dlocal%26storeid%3D210%26locationid%3D9060351%26targetid%3Dpla-297286437545%26campaignid%3D22218257654%26adgroupid%3D174955493259%26gclsrc%3Daw.ds%26gad_source%3D1%26gad_campaignid%3D22218257654%26gbraid%3D0AAAAAD8eAEkygybFMYdbWqW6yElDS9oz1%26gclid%3DCj0KCQjwkrzPBhCqARIsAJN460n9HI4MYMlJCPmk7QRUjEaBQWAP7Rh0Y_PDEgnaNoEmanq0Ut8pWY4aAuw-EALw_wcB" },
+        { name: "Ezra Dress", brand: "POSSE", price: 234, salePrice: null, category: "white-dress",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750409/IMG_9638_da5qun.webp",
+          shopUrl: "https://www.anrdoezrs.net/click-2299623-15842256?sid=whowhatwear-in-1425971534862121380&url=https://www.fwrd.com/product-posse-ezra-dress-in-vintage-white/PSSF-WD64/?d=Womens&tCurrency=USD&tCountryCode=US&utm_source=google&utm_medium=cpc&utm_campaign=PMax:+Product+Listing+Ads+-+FWRD+-+High+ROAS+SKUs&gclsrc=aw.ds&gad_source=1&gad_campaignid=23773030029&gbraid=0AAAAADyLQd5QvxaMM2oXj0KmCF90tZJ0a&gclid=Cj0KCQjwkrzPBhCqARIsAJN460n38xAcyNr7jBgz-74e-8jCmapIx-DhiSdOOJ26yV_lB00ZsdpD1KAaAn2bEALw_wcB" },
+
+        // CAPRIS (3)
+        { name: "No 2467 / Aneu", brand: "PALOMA WOOL", price: 135, salePrice: null, category: "capris",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750410/IMG_9645_mlhehc.webp",
+          shopUrl: "https://palomawool.com/products/aneu-polka-dot-capri-leggings-pw-embroidery" },
+        { name: "The Perfect Capri Pants", brand: "437", price: 95, salePrice: null, category: "capris",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750410/IMG_9646_pkmrwa.webp",
+          shopUrl: "https://www.anrdoezrs.net/click-2299623-15056200?sid=whowhatwear-in-2839541030334941019&url=https://www.revolve.com/437-the-perfect-capri-pants-in-black/dp/437R-WP26/?cjdata=MXxOfDB8WXww&d=Womens&AID=15056200&PID=2299623&utm_medium=affiliate&utm_source=cj&source=cj&utm_campaign=glob_p_1994789&cjevent=82cd2c99427f11f1812b043a0a82b832" },
+        { name: "Capri Leggings", brand: "FORM", price: 78, salePrice: null, category: "capris",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750410/IMG_9648_wdkt83.webp",
+          shopUrl: "https://go.redirectingat.com/?id=92X1711942&xcust=whowhatwear_in_3955253171330093229&xs=1&url=https%3A%2F%2Fjoinform.com%2F%2Fproducts%2Fcapri-leggings-black%3Fvariant%3D45561956008119%26utm_medium%3Dcpc%26utm_source%3Dgoogle%26utm_campaign%3D22759565213%26utm_content%3D_c_%26utm_term%3D%26gad_source%3D1%26gad_campaignid%3D22753367751%26gbraid%3D0AAAAAoL44SOiB_HUwumXWGn4O-ZXkOy6u%26gclid%3DCjwKCAjwhqfPBhBWEiwAZo196mR_iOU3AzFwBqm27KjxTP12iwj1xy7K2Zmk8vP50bIUEnoh7ofCQBoClYYQAvD_BwE%26source%3Daw%26channel%3Daw%26sv1%3Daffiliate%26sv_campaign_id%3D78888%26sscid%3D42254_1777341370_6763e96099cf0a51457460f151f95a6f%26awc%3D42254_1777341370_6763e96099cf0a51457460f151f95a6f&sref=https%3A%2F%2Fwww.whowhatwear.com%2Ffashion%2Fshopping%2Fbasics-summer-2026" },
+
+        // CROPPED FLARES (2)
+        { name: "Kick Cropped Stretch-Cotton Flared Pants", brand: "HIGH SPORT", price: 860, salePrice: null, category: "cropped-flares",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750410/IMG_9650_kn6zac.webp",
+          shopUrl: "https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=24449&u1=whowhatwear-in-1045141986563659752&murl=https%3A%2F%2Fwww.net-a-porter.com%2Fen-us%2Fshop%2Fproduct%2Fhigh-sport%2Fclothing%2Fflared%2Fkick-cropped-stretch-cotton-flared-pants%2F1647597304200884" },
+        { name: "ZW Collection Limited Edition Cropped Flare Pants", brand: "ZARA", price: 129, salePrice: null, category: "cropped-flares",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750411/IMG_9651_eaawex.webp",
+          shopUrl: "https://www.awin1.com/awclick.php?awinmid=21094&awinaffid=231761&clickref=whowhatwear-in-1319849125315914813&p=https%3A%2F%2Fwww.zara.com%2Fus%2Fen%2Fzw-collection-limited-edition-cropped-flare-pants-p02099617.html%3Fv1%3D531634818%26sv1%3Daffiliate%26sv_campaign_id%3D231761%26awc%3D21094_1777316170_c242d9d8481f2e7744787ffc16ba1955%26utm_source%3Dawin%26utm_medium%3Daffiliation%26utm_campaign%3D231761%26utm_content%3DClique%2BMedia%26utm_term%3D21094_1777316170_c242d9d8481f2e7744787ffc16ba1955" },
+
+        // KNEE-LENGTH SKIRTS (4)
+        { name: "The Slip Skirt Black", brand: "COU COU INTIMATES", price: 78, salePrice: null, category: "knee-skirt",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750406/IMG_9653_kpn8mx.webp",
+          shopUrl: "https://www.awin1.com/awclick.php?awinmid=51395&awinaffid=103504&clickref=whowhatwear-in-9763517950132514510&p=https%3A%2F%2Fcoucouintimates.com%2Fen-us%2Fproducts%2Fthe-slip-skirt-black%3Fsource%3Daw%26sv1%3Daffiliate%26sv_campaign_id%3D103504%26sscid%3D51395_1777341906_3b23f70becb5e34b11d5048c3a57fdd2%26awc%3D51395_1777341906_3b23f70becb5e34b11d5048c3a57fdd2" },
+        { name: "Skirt", brand: "ASTR THE LABEL", price: 88, salePrice: null, category: "knee-skirt",
+          imageUrl: "https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=600&h=800&fit=crop",
+          shopUrl: "https://www.anrdoezrs.net/click-2299623-15056200?sid=whowhatwear-in-1091299412708139914&url=https://www.revolve.com/astr-the-label-skirt-in-wine/dp/ASTR-WQ122/?cjdata=MXxOfDB8WXww&d=F&AID=15056200&PID=2299623&utm_medium=affiliate&utm_source=cj&source=cj&utm_campaign=glob_p_1994789&cjevent=c846a8a942a611f1813a004e0a82b839" },
+        { name: "Silk Straight Skirt", brand: "BROOKE CALLAHAN X HOME OF HAI", price: 220, salePrice: null, category: "knee-skirt",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750406/IMG_9656_qriviu.webp",
+          shopUrl: "https://www.brookecallahan.com/collections/brooke-callahan-x-hai/products/hai-x-bc-silk-straight-skirt-pink" },
+        { name: "Layla Knee Length Skirt", brand: "REFORMATION", price: 148, salePrice: null, category: "knee-skirt",
+          imageUrl: "https://res.cloudinary.com/ddlc9pfgn/image/upload/v1777750406/IMG_9657_blr5jg.webp",
+          shopUrl: "https://click.linksynergy.com/deeplink?id=25ZRSXYPVYg&mid=40090&u1=whowhatwear-in-8721403033544614034&murl=https%3A%2F%2Fwww.thereformation.com%2Fproducts%2Flayla-knee-length-skirt%2F1319020BLK.html%3Futm_source%3D25ZRSXYPVYg%26utm_medium%3D10%26utm_campaign%3DLinkShare%26sid%3DLS298X102%26ranMID%3D40090%26ranEAID%3D1921634%26ranSiteID%3D25ZRSXYPVYg-lP5xWx5DfLGxQ_lVURPIUg" }
+    ];
+
+    // Group products by category
+    const groups = {
+        boatneck: { title: "Boatneck Tank Tops", id: "boatneck", products: [] },
+        "black-slip": { title: "Black Slip Dresses", id: "black-slip", products: [] },
+        "white-dress": { title: "White Cotton Dresses", id: "white-cotton", products: [] },
+        capris: { title: "Capris", id: "capris", products: [] },
+        "cropped-flares": { title: "Cropped Flares", id: "cropped-flares", products: [] },
+        "knee-skirt": { title: "Knee-Length Skirts", id: "knee-skirts", products: [] }
+    };
+
+    products.forEach(prod => { if (groups[prod.category]) groups[prod.category].products.push(prod); });
+
+    function renderProductCard(p) {
+        const hasSale = p.salePrice !== null && p.salePrice < p.price;
+        const displayPrice = hasSale ? p.salePrice : p.price;
+        const oldPriceHtml = hasSale ? `<span class="old-price">$${p.price}</span>` : '';
+        const saleClass = hasSale ? 'sale-price' : '';
+        return `
+            <div class="product-card">
+                <div class="card-img"><img src="${p.imageUrl}" alt="${p.brand} ${p.name}" loading="lazy"></div>
+                <div class="card-info">
+                    <div class="brand-name">${p.brand}</div>
+                    <div class="product-title">${p.name}</div>
+                    <div class="price">${oldPriceHtml} <span class="${saleClass}">$${displayPrice}</span></div>
+                    <a href="${p.shopUrl}" target="_blank" rel="noopener noreferrer" class="shop-btn">Shop now →</a>
+                </div>
+            </div>
+        `;
+    }
+
+    function buildSection(groupKey, groupObj) {
+        if (!groupObj.products.length) return '';
+        const productCardsHtml = groupObj.products.map(p => renderProductCard(p)).join('');
+        let anchorId = groupObj.id;
+        if (groupKey === 'white-dress') anchorId = 'white-cotton';
+        if (groupKey === 'black-slip') anchorId = 'black-slip';
+        if (groupKey === 'knee-skirt') anchorId = 'knee-skirts';
+        if (groupKey === 'cropped-flares') anchorId = 'cropped-flares';
+        return `<div class="trend-section" id="${anchorId}"><div class="section-title">${groupObj.title}</div><div class="product-grid">${productCardsHtml}</div></div>`;
+    }
+
+    const container = document.getElementById('product-sections-container');
+    if (container) {
+        let sectionsHtml = '';
+        sectionsHtml += buildSection('boatneck', groups.boatneck);
+        sectionsHtml += buildSection('black-slip', groups['black-slip']);
+        sectionsHtml += buildSection('white-dress', groups['white-dress']);
+        sectionsHtml += buildSection('capris', groups.capris);
+        sectionsHtml += buildSection('cropped-flares', groups['cropped-flares']);
+        sectionsHtml += buildSection('knee-skirt', groups['knee-skirt']);
+        container.innerHTML = sectionsHtml;
+    }
+
+    // extra editorial about natural materials
+    const extraEditorial = document.createElement('div');
+    extraEditorial.style.margin = "40px 0 20px";
+    extraEditorial.style.padding = "20px 0";
+    extraEditorial.style.borderTop = "1px solid #ececec";
+    extraEditorial.innerHTML = `<p style="font-size:0.9rem; color:#3b3b3b;"><strong>🧵 Natural materials & sustainable focus:</strong> Brands like Deiji Studios, Leset, and Tank Air emphasize organic cotton, linen, and silk — elevating summer basics with eco‑conscious luxury. Colorful tops (citrus, cobalt) also made waves in The Great Try-On Spring 2026 report.</p>`;
+    if (container) container.insertAdjacentElement('afterend', extraEditorial);
+</script>
+</body>
+</html>
